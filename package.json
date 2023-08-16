@@ -1,6 +1,6 @@
 {
   "name": "color-scheme-switcher",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A library to select color scheme either manually or automatically.",
   "main": "dist/index.js",
   "scripts": {
@@ -49,5 +49,8 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
