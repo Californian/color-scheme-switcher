@@ -3,6 +3,7 @@ import { Checkbox } from "@/examples/ColorSchemeApp/components";
 
 interface ColorSchemeOptionsTogglerProps {}
 
+// A simple component to demonstrate usage of the `useColorSchemeSwitcher` hook.
 const ColorSchemeOptionsToggler: React.FC<
   ColorSchemeOptionsTogglerProps
 > = () => {

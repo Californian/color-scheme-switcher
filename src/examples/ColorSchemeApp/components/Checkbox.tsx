@@ -4,6 +4,7 @@ interface CheckboxProps {
   setValue: (v: boolean) => void;
 }
 
+// A simple convenience component to keep checkbox code DRY.
 const Checkbox: React.FC<CheckboxProps> = ({ label, value, setValue }) => {
   const handleChange = ({
     target: { checked },
