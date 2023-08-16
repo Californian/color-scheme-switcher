@@ -10,15 +10,15 @@ const useSunPosition = (
   setKey: string = "sunsetEnd"
 ) => {
   const [sunIsUp, setSunIsUp] = useState<boolean | undefined>(undefined);
-
   const [sunPositionNeedsChecking, setSunPositionNeedsChecking] =
     useState<boolean>(false);
+
+  const checkSunlightRef = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
     setSunPositionNeedsChecking(true);
   }, [latitude, longitude, altitude]);
 
-  const checkSunlightRef = useRef<ReturnType<typeof setTimeout>>();
   useEffect(() => {
     if (sunPositionNeedsChecking) {
       const now = new Date();
@@ -26,36 +26,34 @@ const useSunPosition = (
         return;
       }
 
-      const sunTimes = getSunTimes(
+      const { [riseKey]: riseDate, [setKey]: setDate } = getSunTimes(
         now,
         latitude ?? 0,
         longitude ?? 0,
         altitude ?? 0
       );
 
-      const [riseTime, setTime] = [sunTimes[riseKey], sunTimes[setKey]];
+      setSunIsUp(now > riseDate && now < setDate);
 
       const tomorrow = new Date();
       tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
-      const { [riseKey]: tomorrowSunriseEnd } = getSunTimes(
+      const { [riseKey]: tomorrowRiseDate } = getSunTimes(
         tomorrow,
         latitude || 0,
         longitude || 0,
         altitude || 0
       );
-
       const nowMs = now.getTime();
       const timeToNextCheck =
-        now < riseTime
-          ? riseTime.getTime() - nowMs
-          : now < setTime
-            ? setTime.getTime() - nowMs
-            : tomorrowSunriseEnd.getTime() - nowMs;
+        now < riseDate
+          ? riseDate.getTime() - nowMs
+          : now < setDate
+          ? setDate.getTime() - nowMs
+          : tomorrowRiseDate.getTime() - nowMs;
       checkSunlightRef.current = setTimeout(() => {
         setSunPositionNeedsChecking(true);
       }, timeToNextCheck);
 
-      setSunIsUp(now > riseTime && now < setTime);
       setSunPositionNeedsChecking(false);
     }
 
