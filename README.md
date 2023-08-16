@@ -1,11 +1,12 @@
 # Color Scheme Switcher
 
-![NPM Version](https://flat.badgen.net/npm/v/color-scheme-switcher)
-![License](https://flat.badgen.net/npm/license/color-scheme-switcher)
-![Minzipped
-Size](https://flat.badgen.net/bundlephobia/minzip/color-scheme-switcher)
-![Dependencies](https://flat.badgen.net/bundlephobia/dependency-count/color-scheme-switcher)
-![Dependents](https://flat.badgen.net/npm/dependents/color-scheme-switcher)
+[![NPM
+Version](https://flat.badgen.net/npm/v/color-scheme-switcher)](https://www.npmjs.com/package/color-scheme-switcher)
+[![License](https://flat.badgen.net/npm/license/color-scheme-switcher)](https://github.com/Californian/color-scheme-switcher/blob/development/LICENSE.md)
+[![Minzipped
+Size](https://flat.badgen.net/bundlephobia/minzip/color-scheme-switcher)](https://bundlephobia.com/package/color-scheme-switcher)
+[![Dependencies](https://flat.badgen.net/bundlephobia/dependency-count/color-scheme-switcher)](https://bundlephobia.com/package/color-scheme-switcher)
+[![Dependents](https://flat.badgen.net/npm/dependents/color-scheme-switcher)](https://www.npmjs.com/package/color-scheme-switcher?activeTab=dependents)
 
 ## Description
 
