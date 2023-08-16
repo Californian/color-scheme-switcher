@@ -4,8 +4,8 @@
   "description": "A library to select color scheme either manually or automatically.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsup src/index.ts --dts --onSuccess 'npm test'",
-    "build:watch": "tsup src/index.ts --dts --watch",
+    "build": "tsup --dts --onSuccess 'npm test'",
+    "build:watch": "tsup --watch --onSuccess 'tsup --dts-only'",
     "test": "jest",
     "test:watch": "jest --watchAll"
   },
