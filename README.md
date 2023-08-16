@@ -1,14 +1,24 @@
 # Color Scheme Switcher
 
+![NPM Version](https://flat.badgen.net/npm/v/color-scheme-switcher)
+![License](https://flat.badgen.net/npm/license/color-scheme-switcher)
+![Minzipped
+Size](https://flat.badgen.net/bundlephobia/minzip/color-scheme-switcher)
+![Dependencies](https://flat.badgen.net/bundlephobia/dependency-count/color-scheme-switcher)
+![Dependents](https://flat.badgen.net/npm/dependents/color-scheme-switcher)
+
 ## Description
 
-This package facilitates toggling color scheme between light and dark mode in a
-react app.
+This package facilitates toggling the color scheme of a react app between dark
+and light mode.
 
 This can be done either manually or automatically.
 
-If done automatically, it can either use the system color scheme, or follow
+If done automatically, it can either follow the system color scheme, or follow
 daylight in the user's location.
+
+This library is careful not to request geolocation permissions, which could be
+intrusive to users, unless it will be used.
 
 ## Installation
 
@@ -120,6 +130,11 @@ See [src/examples](src/examples) for other examples.
 
    export default HomePage;
    ```
+
+## To-Do
+
+- Document exported utils.
+- Add options for changing other defaults.
 
 ## Development
 
