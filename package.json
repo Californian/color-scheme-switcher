@@ -1,0 +1,53 @@
+{
+  "name": "color-scheme-switcher",
+  "version": "0.0.1",
+  "description": "A library to select color scheme either manually or automatically.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --dts --onSuccess 'npm test'",
+    "build:watch": "tsup src/index.ts --dts --watch",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Californian/color-scheme-switcher.git"
+  },
+  "keywords": [
+    "color-scheme",
+    "dark",
+    "mode",
+    "light",
+    "mode",
+    "react",
+    "hook",
+    "hooks",
+    "context",
+    "provider",
+    "color",
+    "media-query"
+  ],
+  "author": "Californian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Californian/color-scheme-switcher/issues"
+  },
+  "homepage": "https://github.com/Californian/color-scheme-switcher#readme",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.3",
+    "@types/suncalc": "^1.9.0",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "tsup": "^7.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
