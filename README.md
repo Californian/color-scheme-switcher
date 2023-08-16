@@ -42,7 +42,13 @@ Note: `react` and `react-dom` are peer dependencies.
 
 See [src/examples](src/examples) for other examples.
 
-1. In your `_app.tsx` (or similar) file, wrap children with the provider.
+1. In your `_app.tsx` (or similar) file, wrap children with the
+   `color-scheme-switcher` provider.
+
+   Note: if your component library's theme provider can use the
+   `colorSchemeIsLight` boolean from this library directly, wrap the theme
+   provider in a component that calls the `useColorSchemeSwitcher` hook and pass
+   it in directly (not demonstrated here).
 
    ```typescript [src/pages/_app.tsx]
    import { ColorSchemeSwitcherProvider } from "color-scheme-switcher";
