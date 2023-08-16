@@ -1,6 +1,6 @@
 {
   "name": "color-scheme-switcher",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library to select color scheme either manually or automatically.",
   "main": "dist/index.js",
   "scripts": {
